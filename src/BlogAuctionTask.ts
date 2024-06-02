@@ -5,7 +5,7 @@ export class BlogAuctionTask {
     private marketDataRetriever: MarketStudyVendor = new MarketStudyVendor;
 
     priceAndPublish(blog: string, mode: string) {
-        let avgPrice = this.marketDataRetriever.averagePrice(blog);
+        const avgPrice = this.marketDataRetriever.averagePrice(blog);
 
         let proposal = avgPrice + 1;
         let timeFactor = 1;

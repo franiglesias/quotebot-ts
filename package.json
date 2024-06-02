@@ -7,18 +7,16 @@
     "test": "jest --coverage",
     "build": "tsc --build tsconfig.json",
     "build:watch": "tsc --build tsconfig.json --watch",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "try": "tsc quotebot.ts && node quotebot.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.4.0",
-    "@types/jest": "^29.5.12",
-    "@typescript-eslint/eslint-plugin": "^7.11.0",
-    "@typescript-eslint/parser": "^7.11.0",
-    "eslint": "^9.4.0",
-    "globals": "^15.3.0",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^8.57.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.4",
     "typescript": "^5.4.5",
