@@ -2,3 +2,5 @@ node_modules/
 coverage/
 dist/
 .idea/
+src/*.js
+lib/*.js
