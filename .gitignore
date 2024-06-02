@@ -4,3 +4,4 @@ dist/
 .idea/
 src/*.js
 lib/*.js
+/quotebot.js
