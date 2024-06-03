@@ -1,5 +1,5 @@
 /*
-* This simulates a license required for running this 3rd party library
+* This simulates that a license is required for running this 3rd party library
 * You are not allowed to touch this file
 *
 * */
@@ -12,7 +12,7 @@ export class MarketStudyVendor {
         }
 
         function quote() {
-            return Math.round(Math.random() * (4000) + 1000);
+            return Math.round(Math.random() * 100000);
         }
 
         return quote()

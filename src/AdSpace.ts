@@ -8,6 +8,8 @@ export class AdSpace {
             return this.cache;
         }
 
+        // FIXME : only return blogs that start with a 'T'
+
         this.cache = TechBlogs.listAllBlogs();
         return this.cache;
     }

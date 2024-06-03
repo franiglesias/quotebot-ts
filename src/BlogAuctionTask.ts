@@ -1,4 +1,6 @@
+// @ts-ignore
 import {MarketStudyVendor} from "../lib/MarketStudyVendor";
+// @ts-ignore
 import {QuotePublisher} from "../lib/QuotePublisher";
 
 export class BlogAuctionTask {
@@ -6,6 +8,8 @@ export class BlogAuctionTask {
 
     priceAndPublish(blog: string, mode: string) {
         const avgPrice = this.marketDataRetriever.averagePrice(blog);
+
+        // FIXME should actually be +2 not +1
 
         let proposal = avgPrice + 1;
         let timeFactor = 1;
@@ -29,9 +33,8 @@ export class BlogAuctionTask {
         if (proposal % 2 === 0) {
             proposal = 3.14 * proposal
         } else {
-            proposal = 3.15 * timeFactor * Math.floor((new Date().getTime() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 1000);
+            proposal = 3.15 * timeFactor * Math.round((new Date().getTime() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 10000000);
         }
-
 
         QuotePublisher.publish(proposal);
     }

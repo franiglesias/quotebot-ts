@@ -7,7 +7,7 @@
     "test": "jest --coverage",
     "build": "tsc --build tsconfig.json",
     "build:watch": "tsc --build tsconfig.json --watch",
-    "lint": "eslint ./src",
+    "lint": "eslint ./src --ignore-pattern \"**/*.js\"",
     "try": "tsc quotebot.ts && node quotebot.js"
   },
   "keywords": [],
